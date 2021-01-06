@@ -14,10 +14,12 @@ api = Api(app)
 class Race(Resource):
     def get(self):
         data = pd.read_csv('Race.csv')  # read CSV
-        data.set_index("RaceId", drop=True, inplace=True) # convert dataframe to dictionary
-        dictionary = data.to_dict(orient="index")
-        # sorting
-        return dictionary
+        # data.set_index("RaceId", drop=True, inplace=True) # convert dataframe to dictionary
+        data.dropna(inplace = True) 
+        data_dict = data.to_dict() 
+        # dictionary = data.to_dict(orient="index")
+        
+        return data_dict
      
 
 api.add_resource(Race, "/racing")
