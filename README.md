@@ -1,5 +1,2 @@
-# Demo
-Here is the description of the project in readme file.
-
-
-# this is the first edit 
+# This is a Demo for CodeChallenge(3)
+the description of the project in another readme file.
