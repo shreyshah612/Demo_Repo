@@ -11,7 +11,8 @@ resp = response.json()
 
 def get_all_values(nested_dictionary):
     for key, value in nested_dictionary.items():
-        if (type(value) is dict):
+        if(type(value) is dict):
+            print("Race Number = "+key)
             get_all_values(value)
         else:
             print(key, ":", value)
