@@ -2,10 +2,9 @@
 from flask import Flask
 from flask_restful import Resource, Api
 
-import os
+
 import pandas as pd
 import csv
-import json
 
 #using flask's restful api
 app = Flask(__name__)
